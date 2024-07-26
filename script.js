@@ -1,3 +1,6 @@
+// PARALLAX EFFECT CODE -> //
+// START // 
+
 const parallax_el = document.querySelectorAll(".parallax");
 
 let xValue = 0 ,
@@ -15,20 +18,13 @@ let speedy = el.dataset.speedy ;
 // let isInLeft =  parseFloat(getComputedStyle(el).left) < window.innerWidth / 2 ? 1 : -1 ;
 
 el.style.transform = ` translateX(calc(-50% + ${-xValue * speedx}px))  translateY(calc(-50% + ${-yValue * speedy }px))      `
-
-
 })
-
-
  })
 
+ // END //
 
-
- // gsap 
-
-
+ // GSAP  ANIMATION -> 
      let timeline = gsap.timeline();
-
 //     parallax_el.forEach((el)=>{
 
 //          timeline.from(el,
@@ -41,9 +37,7 @@ el.style.transform = ` translateX(calc(-50% + ${-xValue * speedx}px))  translate
 //         ) ;
 // });
 
-
-timeline.from(".text h1 ",
-        
+timeline.from(".text h1 ",        
     {
     y : window.innerHeight - document.querySelector(".text h1").getBoundingClientRect().top ,
     duration : 2 ,
@@ -52,28 +46,16 @@ timeline.from(".text h1 ",
     ).from(
 
 ".text h2 " , {
-
 y : -150,
 opacity : 0 , 
 duration : 1.5 , 
-
-
-
 } , 
 "3"
-
-
-    )  .from(".hide" , {
-
+)  .from(".hide" , {
         opacity : 0 , 
         duration : 1.5 , 
-
     } , "3")
-
-
 timeline.from(".bg-img", {
-
-
  top : `${document.querySelector(".bg-img").offsetHeight /2 - 200}px`  ,
  duration : 3 ,  
 }, "1")

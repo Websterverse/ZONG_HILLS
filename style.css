@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
     padding: 0;
@@ -17,8 +17,6 @@
     justify-content: center;
     gap: 900px;
     color: antiquewhite;
-    /* background-color: #0000; */
-    /* background-color: black; */
     border-bottom: 2px solid #1D976C;
     
 }
@@ -138,7 +136,6 @@ position: absolute;
 z-index: 9;
 pointer-events: auto ;
 padding-bottom: 290px;
-/* top: calc(50% -10px); */
 top:  calc( 50%  );
 left: 50%;
 transform: translate(-50% , -50%);
@@ -223,21 +220,9 @@ line-height: 0.88;
     z-index: 14;
 }
 
-/* .mountain_3{
-    position: absolute;
-    width: 780px;
-    top: calc(50% + 196px) ;
-    left: calc(50% - 305px);
-    transform: translate(-50%  , -50%);
-    z-index: 15;
-
-
-} */
-
 
 .parallax{
 pointer-events: none;
-/* transform: translate(-50%  , -50%); */
 transition: 0.45s cubic-bezier(.2 , .49 , .32 , .99);
 
 
@@ -286,7 +271,6 @@ transition: 0.45s cubic-bezier(.2 , .49 , .32 , .99);
     width: 595px;
     top: 0 ;
     right:0 ;
-    /* transform: translate(-50%  , -50%); */
     z-index: 19;
     pointer-events: none;
 
@@ -299,7 +283,6 @@ transition: 0.45s cubic-bezier(.2 , .49 , .32 , .99);
     width: 100%;
     bottom: 0 ;
     right:0 ;
-    /* transform: translate(-50%  , -50%); */
     z-index: 20;
     pointer-events: none;
 
@@ -330,7 +313,6 @@ height: 100%;
 pointer-events: none;
 top: 0;
 left: 0;
-/* background-color: radia; */
 background: radial-gradient(ellipse at center , rgba(0 ,0 ,0 ,0) 65% , rgba (0,0,0,0.7));
 
 }
@@ -341,4 +323,228 @@ background: radial-gradient(ellipse at center , rgba(0 ,0 ,0 ,0) 65% , rgba (0,0
 
 
 
+ */
 
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: antiquewhite;
+    border-bottom: 2px solid #1D976C;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    gap: 20px;
+    height: 100%;
+}
+
+.main {
+    height: 100vh;
+    background-color: #353;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.bg-img, .fog_7, .mountain_10, .fog_6, .mountain_9, .mountain_8, .fog_5, .mountain_7, .mountain_6, .fog_4, .mountain_5, .fog_3, .mountain_4, .fog_2, .mountain_2, .mountain_1, .fog_1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    position: absolute;
+    z-index: 9;
+    pointer-events: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.text h2 {
+    pointer-events: auto;
+    line-height: 0.88;
+    font-weight: 100;
+    font-size: 6.5rem;
+}
+
+::selection {
+    background: #353;
+}
+
+.text h1 {
+    pointer-events: auto;
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 0.88;
+}
+
+.parallax {
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.2, .49, .32, .99);
+}
+
+.sun_rays, .black_shadow, .vig {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sun_rays {
+    top: 0;
+    right: 0;
+    z-index: 19;
+}
+
+.black_shadow {
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.vig {
+    z-index: 100;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7));
+}
+
+/* Responsive Styles */
+@media (max-width: 375px) {
+    .nav {
+        height: 50px;
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 10px;
+    }
+
+    .info {
+        gap: 10px;
+    }
+
+    .text h2 {
+        font-size: 0.2rem;
+    }
+
+    .text h1 {
+        font-size: 1rem;
+    }
+
+    .bg-img, .fog_7, .mountain_10, .fog_6, .mountain_9, .mountain_8, .fog_5, .mountain_7, .mountain_6, .fog_4, .mountain_5, .fog_3, .mountain_4, .fog_2, .mountain_2, .mountain_1, .fog_1 {
+        width: 100%;
+    }
+
+    .bg-img {
+        top: 50%;
+        left: 50%;
+    }
+
+    .fog_7 {
+        top: 40%;
+        left: 50%;
+    }
+
+    .mountain_10 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .fog_6 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .mountain_9 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .mountain_8 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .fog_5 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .mountain_7 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .mountain_6 {
+        top: 50%;
+        left: 50%;
+    }
+
+    .fog_4 {
+        top: 60%;
+        left: 50%;
+    }
+
+    .mountain_5 {
+        top: 60%;
+        left: 50%;
+    }
+
+    .fog_3 {
+        top: 60%;
+        left: 50%;
+    }
+
+    .mountain_4 {
+        top: 60%;
+        left: 50%;
+    }
+
+    .fog_2 {
+        top: 70%;
+        left: 50%;
+    }
+
+    .mountain_2 {
+        top: 70%;
+        left: 50%;
+    }
+
+    .mountain_1 {
+        top: 70%;
+        left: 50%;
+    }
+
+    .fog_1 {
+        top: 80%;
+        left: 50%;
+    }
+}
